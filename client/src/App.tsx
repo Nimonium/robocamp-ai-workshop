@@ -3,6 +3,8 @@ import Hero from './components/Hero';
 import WorkshopDetails from './components/WorkshopDetails';
 import LearningOutcomes from './components/LearningOutcomes';
 import FAQSection from './components/FAQSection';
+import RegistrationForm from './components/RegistrationForm';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
         <WorkshopDetails />
         <LearningOutcomes />
         <FAQSection />
+        <RegistrationForm />
       </main>
+      <Footer />
     </>
   );
 }
