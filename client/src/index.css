@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .btn-3d {
+        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border-bottom-width: 4px;
+    }
+    .btn-3d:active {
+        transform: translateY(2px);
+        border-bottom-width: 0;
+        margin-bottom: 4px;
+    }
+}
