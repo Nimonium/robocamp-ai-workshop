@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: robocamp-api
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: CLIENT_URL
+        value: https://your-vercel-app-url.vercel.app
+      - key: MONGODB_URI
+        sync: false
