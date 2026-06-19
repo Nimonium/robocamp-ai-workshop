@@ -43,7 +43,7 @@ export default function RegistrationForm() {
         <h2 className="font-display-lg text-headline-md md:text-display-lg text-center text-ink-blue mb-16">Reserve Your Spot</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
           <div className="flex justify-center order-2 lg:order-1">
-            <img alt="Waving mascot robot" className="w-full max-w-md h-auto animate-float drop-shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSyIb3QjQUNTpQo_buiPONxPfVqPtFnk2ktkSW25-19kII2gC9l_N2jKuomgSWqVaqjEopSME83VR-hIU5O4Av-krKqo6bAY1f3fQ3drcOiaVoxmy1WtXWH7dEKqKQeRkeUBxPyRC-uNv7SnJHVR4tuKqOCy38_Zsod9n6B-OohMCbiO43ePQC1J6IF8xE3QkQL8DnXue5LEKGeP3vvEr1xkVQOdN87GPrGyVGUM6Vy7xsFuUuNz714XV7ZHItz-Ah88bq9Sh-LxDL" />
+            <img alt="Waving mascot robot" className="w-full max-w-md h-auto animate-float drop-shadow-xl" src="/mascot.png" />
           </div>
           <div className="order-1 lg:order-2">
             <div className="bg-surface-container-lowest p-8 md:p-12 rounded-3xl shadow-lg border border-outline-variant/10">
