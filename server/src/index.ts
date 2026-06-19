@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
@@ -26,7 +27,9 @@ app.get('/api/health', (req, res) => {
 const enquirySchema = z.object({
   name: z.string().min(1, 'Name is required'),
   email: z.string().email('Valid email is required'),
-  phone: z.string().regex(/^\+?\d{10,15}$/, 'Valid phone number is required (min 10 digits)')
+  phone: z.string().refine((val) => val.replace(/\D/g, '').length >= 10, {
+    message: 'Valid phone number is required (min 10 digits)'
+  })
 });
 
 app.post('/api/enquiry', async (req, res) => {

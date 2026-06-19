@@ -10,8 +10,8 @@ export default function RegistrationForm() {
   const validate = () => {
     const newErrors: any = {};
     if (!formData.name.trim()) newErrors.name = 'Name is required';
-    if (!formData.email.trim() || !/^\\S+@\\S+\\.\\S+$/.test(formData.email)) newErrors.email = 'Valid email is required';
-    if (!formData.phone.trim() || !/^\\+?\\d{10,15}$/.test(formData.phone.replace(/[\\s-]/g, ''))) newErrors.phone = 'Valid phone number is required (min 10 digits)';
+    if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = 'Valid email is required';
+    if (!formData.phone.trim() || formData.phone.replace(/\D/g, '').length < 10) newErrors.phone = 'Valid phone number is required (min 10 digits)';
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
