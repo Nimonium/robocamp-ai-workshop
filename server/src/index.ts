@@ -58,9 +58,9 @@ app.post('/api/enquiry', async (req, res) => {
     });
   } catch (error) {
     if (error instanceof z.ZodError) {
-      const errors = error.errors.reduce((acc, curr) => {
+      const errors = error.issues.reduce((acc: Record<string, string>, curr: z.ZodIssue) => {
         if (curr.path.length > 0) {
-          acc[curr.path[0]] = curr.message;
+          acc[String(curr.path[0])] = curr.message;
         }
         return acc;
       }, {} as Record<string, string>);
