@@ -9,8 +9,15 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
-app.use(cors({ origin: process.env.CLIENT_URL || '*' }));
+app.use(cors({ origin: process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',') : '*' }));
 app.use(express.json());
+
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  console.log('Headers:', req.headers.origin || req.headers.host);
+  if (req.method === 'POST') console.log('Body:', req.body);
+  next();
+});
 
 if (MONGODB_URI) {
   mongoose.connect(MONGODB_URI)
