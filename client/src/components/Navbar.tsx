@@ -18,6 +18,12 @@ export default function Navbar() {
           }
         }
       }
+      
+      // If reached the bottom of the page, force 'contact'
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+        current = 'contact';
+      }
+      
       setActiveSection(current);
     };
 

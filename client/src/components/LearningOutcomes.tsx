@@ -2,7 +2,7 @@ import { learningOutcomes } from '../data/content';
 
 export default function LearningOutcomes() {
   return (
-    <section className="py-24 px-margin-mobile md:px-margin-desktop bg-background">
+    <section id="blog" className="py-24 px-margin-mobile md:px-margin-desktop bg-background">
       <div className="max-w-container-max mx-auto">
         <h2 className="font-display-lg text-headline-md text-center text-ink-blue mb-12">What Your Child Will Learn</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
